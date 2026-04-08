@@ -154,7 +154,7 @@ document.getElementById('search-btn').addEventListener('click', function(){
        const searchVlaue = input.value.trim().toLowerCase();
        console.log(searchVlaue);
 
-   const filterData = allIssues.filter(post=>post.title.toLowerCase().includes(searchVlaue)|| post.priority.toLowerCase().includes(searchVlaue) || post.description.toLowerCase().includes(searchVlaue)|| post.label.toLowerCase().includes(searchVlaue));
+   const filterData = allIssues.filter(post=>post.title.toLowerCase().includes(searchVlaue)|| post.priority.toLowerCase().includes(searchVlaue) || post.description.toLowerCase().includes(searchVlaue));
    console.log(filterData)
 
    displayPost(filterData);
