@@ -20,7 +20,7 @@ const displayPost =(posts)=>{
   
    
   div.innerHTML = `
-   <div class=" border border-t-4 ${post.status === 'open' ? 'border-green-500': 'border-purple-500'} mt-3 p-5 space-y-3 rounded-lg shadow-2xl mb-2">
+   <div class=" border border-t-4 ${post.status === 'open' ? 'border-green-500': 'border-purple-500'} mt-3 p-5 space-y-3 rounded-lg shadow-2xl mb-2 flex flex-col h-full">
                   <div class="flex justify-between items-center">
                      <div>
                       <img src="${post.status === 'open' ? './assets/Open-Status.png' : './assets/Closed- Status .png'}" alt="">
@@ -66,6 +66,7 @@ console.log(clickTab)
    
 if(clickTab === 'all'){
    displayPost (allIssues)
+   document.getElementById('count').innerText = allIssues.length;
 }else if (clickTab === 'open') {
     const filteredData = allIssues.filter(post=> post.status === 'open')
     document.getElementById("count").innerText = filteredData.length;
